@@ -30,6 +30,8 @@ def default_parser():
                         help='disable logging in wandb (if that is the logger).')
     parser.add_argument('--cache', action='store_true',
                         help='load data to RAM.')
+    parser.add_argument('--data_path', type=str, default='')
+    parser.add_argument('--model_dir', type=str, default='')
     return parser
 
 
@@ -47,6 +49,8 @@ def load_config(args):
     config.MODE = args.mode
     if len(args.out_dir) > 0:
         config.training.out_dir = args.out_dir
+    if len(args.model_dir) > 0:
+        config.training.model_dir = args.model_dir
     if args.dry_run:
         config.wandb.dry_run = True
     if args.cache:
@@ -69,6 +73,10 @@ def load_config(args):
         config.DEVICE = torch.device("cpu")
 
     config.log_level = args.log
+    
+    if len(args.data_path) > 0:
+        config.data.path = args.data_path
+        
     return config
 
 

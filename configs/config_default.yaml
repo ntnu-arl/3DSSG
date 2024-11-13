@@ -28,6 +28,7 @@ training:
  visualize_every: 500
  backup_every: 5000
  out_dir: experiments/
+ model_dir: models/
  model_selection_metric: iou_node_cls
  model_selection_mode: maximize # can be maximize or minimize. e.g. if it's "loss", should "minimize", if it's accuracy, should "maximize"
  metric_smoothing:
