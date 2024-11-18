@@ -10,15 +10,15 @@ from .networks_base import BaseNetwork
 import inspect
 from collections import OrderedDict
 import os
-from codeLib.utils import onnx
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils import onnx
 from torch_geometric.nn.conv import MessagePassing
 from torch import Tensor
 import torch.nn as nn
 from typing import Optional
 from copy import deepcopy
 from torch_scatter import scatter
-from codeLib.common import filter_args_create
-import ssg
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import filter_args_create
+import reasoning_ros_interface.methods.ssg_3d.ssg as ssg
 
 
 class TripletGCN(MessagePassing):

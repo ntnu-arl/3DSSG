@@ -1,8 +1,8 @@
 import torch.nn as nn
 import torch.nn.functional as F
 import torch
-from codeLib.utils import onnx
-from codeLib.common import reset_parameters_with_activation
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils import onnx
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import reset_parameters_with_activation
 # from .networks_base import BaseNetwork
 
 

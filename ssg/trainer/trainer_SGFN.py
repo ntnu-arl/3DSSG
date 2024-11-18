@@ -3,22 +3,22 @@ import copy
 import torch
 import time
 import logging
-import ssg
+import reasoning_ros_interface.methods.ssg_3d.ssg as ssg
 import time
 import numpy as np
 from tqdm import tqdm  # , tnrange
 from collections import defaultdict
-from codeLib.models import BaseTrainer
-from codeLib.common import check_weights, check_valid, convert_torch_to_scalar
-from ssg.utils.util_eva import EvalSceneGraphBatch, EvalUpperBound  # EvalSceneGraph,
-import codeLib.utils.moving_average as moving_average
-from codeLib.models import BaseTrainer
+from reasoning_ros_interface.methods.ssg_3d.codeLib.models import BaseTrainer
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import check_weights, check_valid, convert_torch_to_scalar
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils.util_eva import EvalSceneGraphBatch, EvalUpperBound  # EvalSceneGraph,
+import reasoning_ros_interface.methods.ssg_3d.codeLib.utils.moving_average as moving_average
+from reasoning_ros_interface.methods.ssg_3d.codeLib.models import BaseTrainer
 from tqdm import tqdm
-import codeLib.utils.string_numpy as snp
-from ssg.utils.util_data import match_class_info_from_two, merge_batch_mask2inst
-from ssg import define
-from ssg.utils.graph_vis import DrawSceneGraph
-from ssg.trainer.eval_inst import EvalInst
+import reasoning_ros_interface.methods.ssg_3d.codeLib.utils.string_numpy as snp
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils.util_data import match_class_info_from_two, merge_batch_mask2inst
+from reasoning_ros_interface.methods.ssg_3d.ssg import define
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils.graph_vis import DrawSceneGraph
+from reasoning_ros_interface.methods.ssg_3d.ssg.trainer.eval_inst import EvalInst
 
 logger_py = logging.getLogger(__name__)
 

@@ -4,9 +4,9 @@ import torch
 import torch.nn as nn
 # from ssg.models import encoder
 # from ssg.models.networks_base import BaseNetwork
-from codeLib.common import reset_parameters_with_activation
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import reset_parameters_with_activation
 from torchvision.ops import roi_align
-from ssg.models.encoder import point_encoder_dict
+from reasoning_ros_interface.methods.ssg_3d.ssg.models.encoder import point_encoder_dict
 import logging
 
 logger_py = logging.getLogger(__name__)

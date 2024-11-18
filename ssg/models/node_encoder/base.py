@@ -11,7 +11,7 @@ from torchvision.ops import roi_align
 from torchvision import models
 import logging
 import os
-from codeLib.utils import onnx
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils import onnx
 logger_py = logging.getLogger(__name__)
 
 

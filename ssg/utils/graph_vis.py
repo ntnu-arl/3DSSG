@@ -10,12 +10,12 @@ import operator
 import logging
 import torch
 from collections import defaultdict
-from ssg.utils import util_label, util_merge_same_part
-from ssg.utils.util_data import raw_to_data, cvt_all_to_dict_from_h5
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils import util_label, util_merge_same_part
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils.util_data import raw_to_data, cvt_all_to_dict_from_h5
 # from codeLib.common import rgb_2_hex
-from codeLib.common import rand_24_bit, color_hex_rgb, rgb_2_hex
-from codeLib.geoemetry.common import create_box
-from ssg import define
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import rand_24_bit, color_hex_rgb, rgb_2_hex
+from reasoning_ros_interface.methods.ssg_3d.codeLib.geoemetry.common import create_box
+from reasoning_ros_interface.methods.ssg_3d.ssg import define
 import math
 
 logger_py = logging.getLogger(__name__)

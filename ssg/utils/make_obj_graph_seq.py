@@ -10,15 +10,12 @@ from tqdm import tqdm
 from PIL import Image
 from torchvision.utils import draw_bounding_boxes
 import matplotlib.pyplot as plt
-import codeLib
-from codeLib.torch.visualization import show_tv_grid
-from codeLib.common import color_rgb, rand_24_bit
-from codeLib.utils.util import read_txt_to_list
+from reasoning_ros_interface.methods.ssg_3d.codeLib.torch.visualization import show_tv_grid
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import color_rgb, rand_24_bit
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils.util import read_txt_to_list
 from collections import defaultdict
-from ssg import define
-from ssg.utils import util_label
-from ssg.objects.node import Node
-from ssg.utils import util_data
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils import util_label
+from reasoning_ros_interface.methods.ssg_3d.ssg.objects.node import Node
 
 structure_labels = ['wall', 'floor', 'ceiling']
 

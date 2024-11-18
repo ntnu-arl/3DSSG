@@ -12,21 +12,21 @@ import numpy as np
 import multiprocessing as mp
 
 # from utils import util_ply, util_data, util, define
-from codeLib.common import random_drop
-from codeLib import transformation
-from ssg.utils import util_ply, util_data
-from codeLib.utils.util import read_txt_to_list, check_file_exist
-from ssg import define
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import random_drop
+from reasoning_ros_interface.methods.ssg_3d.codeLib import transformation
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils import util_ply, util_data
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils.util import read_txt_to_list, check_file_exist
+from reasoning_ros_interface.methods.ssg_3d.ssg import define
 # from codeLib.torch.visualization import show_tensor_images
-from codeLib.common import normalize_imagenet
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import normalize_imagenet
 from torchvision import transforms
-import codeLib.torchvision.transforms as cltransform
-import ssg.utils.compute_weight as compute_weight
-from ssg.utils.util_data import raw_to_data, data_to_raw, cvt_all_to_dict_from_h5
-import codeLib.utils.string_numpy as snp
+import reasoning_ros_interface.methods.ssg_3d.codeLib.torchvision.transforms as cltransform
+import reasoning_ros_interface.methods.ssg_3d.ssg.utils.compute_weight as compute_weight
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils.util_data import raw_to_data, data_to_raw, cvt_all_to_dict_from_h5
+import reasoning_ros_interface.methods.ssg_3d.codeLib.utils.string_numpy as snp
 import logging
 from PIL import Image
-from codeLib.common import run
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import run
 from pytictoc import TicToc
 from torch_geometric.data import HeteroData
 

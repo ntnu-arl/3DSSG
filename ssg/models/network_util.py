@@ -9,7 +9,7 @@ Created on Sat Oct 10 16:46:24 2020
 import torch
 from torch_geometric.nn.conv import MessagePassing
 from .networks_base import mySequential
-from codeLib.common import reset_parameters_with_activation
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import reset_parameters_with_activation
 
 
 def MLP(channels: list, do_bn=False, on_last=False, drop_out=None):

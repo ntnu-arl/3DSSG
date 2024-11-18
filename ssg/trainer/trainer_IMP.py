@@ -1,17 +1,17 @@
 import copy
 from tqdm import tqdm
 from collections import defaultdict
-from codeLib.models import BaseTrainer
-from codeLib.common import check_weights, convert_torch_to_scalar
+from reasoning_ros_interface.methods.ssg_3d.codeLib.models import BaseTrainer
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import check_weights, convert_torch_to_scalar
 import torch
-from ssg.utils.util_eva import EvalSceneGraphBatch
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils.util_eva import EvalSceneGraphBatch
 import time
 import logging
-import codeLib.utils.moving_average as moving_average
-import ssg
-from ssg import define
-from ssg.trainer.eval_inst import EvalInst
-from ssg.utils.util_eva import merged_prediction_to_node
+import reasoning_ros_interface.methods.ssg_3d.codeLib.utils.moving_average as moving_average
+import reasoning_ros_interface.methods.ssg_3d.ssg as ssg
+from reasoning_ros_interface.methods.ssg_3d.ssg import define
+from reasoning_ros_interface.methods.ssg_3d.ssg.trainer.eval_inst import EvalInst
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils.util_eva import merged_prediction_to_node
 logger_py = logging.getLogger(__name__)
 
 

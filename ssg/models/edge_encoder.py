@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
-from ssg.models.encoder import point_encoder_dict
+from reasoning_ros_interface.methods.ssg_3d.ssg.models.encoder import point_encoder_dict
 from torch_geometric.nn.conv import MessagePassing
 import os
-from codeLib.utils import onnx
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils import onnx
 import inspect
 from collections import OrderedDict
 

@@ -2,11 +2,11 @@ import glob
 import numpy as np
 import torch,random
 import copy,os
-from codeLib.utils.util import read_txt_to_list
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils.util import read_txt_to_list
 # import ssg2d
-from ssg.objects import Node
-import codeLib.utils.string_numpy as snp
-from ssg import define
+from reasoning_ros_interface.methods.ssg_3d.ssg.objects import Node
+import reasoning_ros_interface.methods.ssg_3d.codeLib.utils.string_numpy as snp
+from reasoning_ros_interface.methods.ssg_3d.ssg import define
 import ast
 import copy
 def get_all_scan_id_splits(path:str):

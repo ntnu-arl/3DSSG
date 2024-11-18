@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 # from ssg2d.models.networks_base import BaseNetwork
-from codeLib.common import reset_parameters_with_activation
-from codeLib.utils import onnx
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import reset_parameters_with_activation
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils import onnx
 class PointNetfeat(nn.Module):
     def __init__(self, global_feat = True, 
                  point_size=3, out_size=1024, batch_norm = True,

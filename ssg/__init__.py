@@ -1,7 +1,9 @@
 import argparse
 import os
-import codeLib
+import reasoning_ros_interface.methods.ssg_3d.codeLib as codeLib
 import torch
+from pathlib import Path
+from typing import Optional
 from .training import Trainer
 from . import dataset
 from .sgfn import SGFN
@@ -86,3 +88,61 @@ def Parse():
     """
     args = default_parser().parse_args()
     return load_config(args)
+
+
+
+def get_config(config: Path,
+               model_dir: Path,
+               loadbest: bool = True,
+               log: str = "NONE",
+               out_dir: Optional[str] = None,
+               mode: str = 'eval',
+               dry_run: bool = True,
+               load_cache: bool = False,
+               data_path: str = '') -> codeLib.Config:
+    """
+    Initializes the config.
+    :param config: Path to the config file.
+    :param model_dir: Path to the model directory.
+    :param loadbest: Load the best model or not.
+    :param log: Log level.
+    :param out_dir: Output directory.
+    """
+    config_path = os.path.abspath(str(config))
+    if not os.path.exists(config_path):
+        raise RuntimeError(
+            'Target config file does not exist. {}'.format(config_path))
+
+    # load config file
+    config = codeLib.Config(config_path)
+    # configure config based on the input arguments
+    config.config_path = config_path
+    config.LOADBEST = int(loadbest)
+    config.MODE = mode
+    config.training.model_dir = str(model_dir)
+    config.wandb.dry_run = dry_run
+    config.data.load_cache = load_cache
+    
+    if out_dir:
+        config.training.out_dir = out_dir
+
+    # check if name exist
+    if 'name' not in config:
+        config_name = os.path.basename(str(config))
+        if len(config_name) > len('config_'):
+            name = config_name[len('config_'):]
+            name = os.path.splitext(name)[0]
+            translation_table = dict.fromkeys(map(ord, '!@#$'), None)
+            name = name.translate(translation_table)
+            config['name'] = name
+
+    # init device
+    if torch.cuda.is_available() and len(config.GPU) > 0:
+        config.DEVICE = torch.device("cuda")
+    else:
+        config.DEVICE = torch.device("cpu")
+
+    config.log_level = log
+    config.data.path = data_path
+        
+    return config

@@ -6,7 +6,7 @@ import pathlib
 import torch
 import numpy as np
 # import ssg
-from codeLib.utils.plot_confusion_matrix import plot_confusion_matrix
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils.plot_confusion_matrix import plot_confusion_matrix
 from collections import defaultdict
 from torch import Tensor
 from torch_geometric.data import HeteroData

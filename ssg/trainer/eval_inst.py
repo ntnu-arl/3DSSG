@@ -3,11 +3,11 @@ import numpy as np
 import torch
 
 from tqdm import tqdm
-from codeLib.utils import moving_average
-from ssg import define
-from ssg.utils.util_data import match_class_info_from_two, merge_batch_mask2inst
-from ssg.utils.util_eva import EvalSceneGraphBatch, EvalUpperBound
-import codeLib.utils.string_numpy as snp
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils import moving_average
+from reasoning_ros_interface.methods.ssg_3d.ssg import define
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils.util_data import match_class_info_from_two, merge_batch_mask2inst
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils.util_eva import EvalSceneGraphBatch, EvalUpperBound
+import reasoning_ros_interface.methods.ssg_3d.codeLib.utils.string_numpy as snp
 
 
 class EvalInst(object):

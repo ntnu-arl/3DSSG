@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from ssg.models.node_encoder.base import NodeEncoderBase
+from reasoning_ros_interface.methods.ssg_3d.ssg.models.node_encoder.base import NodeEncoderBase
 # from torchvision import models
 from torchvision.ops import roi_align
 import logging

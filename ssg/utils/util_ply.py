@@ -1,8 +1,8 @@
 import os
 import trimesh
 import numpy as np
-from codeLib.utils.util import check_file_exist
-import ssg.define as define
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils.util import check_file_exist
+import reasoning_ros_interface.methods.ssg_3d.ssg.define as define
 from plyfile import PlyElement, PlyData
 
 

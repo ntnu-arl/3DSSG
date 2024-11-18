@@ -1,5 +1,5 @@
 import torch.nn as nn
-from codeLib.common import filter_args_create
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import filter_args_create
 
 
 class BaseNetwork(nn.Module):

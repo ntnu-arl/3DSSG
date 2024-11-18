@@ -1,9 +1,10 @@
-import argparse, codeLib
+import argparse
+import reasoning_ros_interface.methods.ssg_3d.codeLib as codeLib
 import torch
-from ssg import define
-import ssg.config as config
-from ssg.utils.util_data import match_class_info_from_two
-from ssg.utils.util_eva import EvalUpperBound
+from reasoning_ros_interface.methods.ssg_3d.ssg import define
+import reasoning_ros_interface.methods.ssg_3d.ssg.config as config
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils.util_data import match_class_info_from_two
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils.util_eva import EvalUpperBound
 
 def process(cfg1,cfg2):
     db_1  = config.get_dataset(cfg1,'test')

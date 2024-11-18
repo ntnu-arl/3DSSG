@@ -1,5 +1,5 @@
-from ssg import define
-import codeLib
+from reasoning_ros_interface.methods.ssg_3d.ssg import define
+import reasoning_ros_interface.methods.ssg_3d.codeLib as codeLib
 # import ssg2d.utils.util as util
 # try: import define
 # except: from utils import define

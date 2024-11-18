@@ -11,7 +11,7 @@ import json
 import argparse
 import math
 import numpy as np
-from ssg import define
+from reasoning_ros_interface.methods.ssg_3d.ssg import define
 from collections import defaultdict
 
 

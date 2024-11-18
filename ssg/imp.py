@@ -7,8 +7,8 @@ Created on Tue Oct 12 17:19:08 2021
 """
 import torch
 from torch import nn
-import ssg
-from codeLib.utils.util import pytorch_count_params
+import reasoning_ros_interface.methods.ssg_3d.ssg as ssg
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils.util import pytorch_count_params
 import logging
 from pytictoc import TicToc
 logger_py = logging.getLogger(__name__)

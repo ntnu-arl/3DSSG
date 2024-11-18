@@ -1,13 +1,13 @@
 import importlib
 import os
-from codeLib.common import filter_args_create
-from codeLib.utils import onnx
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import filter_args_create
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils import onnx
 import torch
 from torch import nn
-import ssg
+import reasoning_ros_interface.methods.ssg_3d.ssg as ssg
 import torchvision
 from .models.classifier import PointNetRelClsMulti, PointNetRelCls
-from codeLib.utils.util import pytorch_count_params
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils.util import pytorch_count_params
 import logging
 logger_py = logging.getLogger(__name__)
 

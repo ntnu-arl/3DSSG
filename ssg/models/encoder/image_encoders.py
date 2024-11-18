@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from torchvision import models
-from codeLib.common import normalize_imagenet
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import normalize_imagenet
 
 
 class ConvEncoder(nn.Module):

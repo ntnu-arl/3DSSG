@@ -3,13 +3,13 @@ import os
 import numpy as np
 from tqdm import tqdm, tnrange
 from collections import defaultdict
-import ssg
-from codeLib.models import BaseTrainer
+import reasoning_ros_interface.methods.ssg_3d.ssg
+from reasoning_ros_interface.methods.ssg_3d.codeLib.models import BaseTrainer
 import torch
 import time
 import logging
-from ssg.checkpoints import CheckpointIO
-import codeLib.utils.moving_average as moving_average
+from reasoning_ros_interface.methods.ssg_3d.ssg.checkpoints import CheckpointIO
+import reasoning_ros_interface.methods.ssg_3d.codeLib.utils.moving_average as moving_average
 import torch.multiprocessing
 from pytictoc import TicToc
 logger_py = logging.getLogger(__name__)

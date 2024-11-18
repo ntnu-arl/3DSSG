@@ -2,6 +2,7 @@ import os
 import yaml
 import re
 from copy import copy, deepcopy
+from pathlib import Path
 # General config
 def load_config(path, level:int=0):
     ''' Loads config file.
@@ -21,9 +22,9 @@ def load_config(path, level:int=0):
     # If no, use the default_path
     if inherit_from is not None:
         if isinstance(inherit_from,list):
-            cfg = [load_config(path,level+1) for path in inherit_from]
+            cfg = [load_config(Path(path).parent.parent / subpath,level+1) for subpath in inherit_from]
         else:
-            cfg = [load_config(inherit_from,level+1)]
+            cfg = [load_config(Path(path).parent.parent.parent / inherit_from,level+1)]
     # elif default_path is not None:
     #     with open(default_path, 'r') as f:
     #         cfg = [yaml.load(f, Loader=yaml.Loader)]

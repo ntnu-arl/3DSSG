@@ -1,6 +1,6 @@
 import torch
-from ssg.models.node_encoder.base import NodeEncoderBase
-from ssg.models.network_GNN import MSG_MV_DIRECT
+from reasoning_ros_interface.methods.ssg_3d.ssg.models.node_encoder.base import NodeEncoderBase
+from reasoning_ros_interface.methods.ssg_3d.ssg.models.network_GNN import MSG_MV_DIRECT
 import logging
 logger_py = logging.getLogger(__name__)
 

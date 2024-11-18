@@ -6,12 +6,12 @@ Created on Tue Oct 12 17:19:08 2021
 @author: sc
 """
 import os
-from codeLib.utils import onnx
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils import onnx
 import torch
 from torch import nn
-import ssg
+import reasoning_ros_interface.methods.ssg_3d.ssg as ssg
 from .models.classifier import PointNetCls, PointNetRelClsMulti, PointNetRelCls
-from codeLib.utils.util import pytorch_count_params
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils.util import pytorch_count_params
 import logging
 logger_py = logging.getLogger(__name__)
 

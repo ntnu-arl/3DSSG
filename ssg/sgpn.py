@@ -6,8 +6,8 @@ if __name__ == '__main__' and __package__ is None:
 import torch
 from torch import nn
 from .models.classifier import PointNetCls, PointNetRelClsMulti, PointNetRelCls
-import ssg
-from codeLib.utils.util import pytorch_count_params
+import reasoning_ros_interface.methods.ssg_3d.ssg as ssg
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils.util import pytorch_count_params
 
 
 class SGPN(nn.Module):

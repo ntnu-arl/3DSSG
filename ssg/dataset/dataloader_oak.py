@@ -13,10 +13,10 @@ import itertools
 import logging
 import open3d as o3d
 
-from ssg import define
-from ssg.utils import util_data
-from codeLib import transformation
-from codeLib.utils.util import read_txt_to_list
+from reasoning_ros_interface.methods.ssg_3d.ssg import define
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils import util_data
+from reasoning_ros_interface.methods.ssg_3d.codeLib import transformation
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils.util import read_txt_to_list
 
 logger_py = logging.getLogger(__name__)
 

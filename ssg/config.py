@@ -1,13 +1,13 @@
 import os
 import copy
 import logging
-import ssg
-from ssg import SGFN, SGPN, IMP, JointSG
+import reasoning_ros_interface.methods.ssg_3d.ssg as ssg
+from reasoning_ros_interface.methods.ssg_3d.ssg import SGFN, SGPN, IMP, JointSG
 from torch.utils.tensorboard import SummaryWriter
-from codeLib.loggers import WandbLogger
-from codeLib.common import filter_args_create
+from reasoning_ros_interface.methods.ssg_3d.codeLib.loggers import WandbLogger
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import filter_args_create
 import torch.optim as optim
-from ssg.trainer import trainer_dict
+from reasoning_ros_interface.methods.ssg_3d.ssg.trainer import trainer_dict
 from copy import deepcopy
 
 logger_py = logging.getLogger(__name__)

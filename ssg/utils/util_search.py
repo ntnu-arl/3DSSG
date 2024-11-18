@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 import open3d as o3d
-from codeLib.utils import util
+from reasoning_ros_interface.methods.ssg_3d.codeLib.utils import util
 from enum import Enum
 
 class SAMPLE_METHODS(Enum):

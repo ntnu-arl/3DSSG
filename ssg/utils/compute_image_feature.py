@@ -5,15 +5,15 @@ Load graph file. Compute image feature for all the keyframes and save
 
 '''
 import os,logging, argparse
-import ssg
-from ssg import define
+import reasoning_ros_interface.methods.ssg_3d.ssg as ssg
+from reasoning_ros_interface.methods.ssg_3d.ssg import define
 import torch
 from PIL import Image
 from torchvision import transforms
 from tqdm import tqdm
-from codeLib.common import normalize_imagenet
-from ssg.utils.util_data import raw_to_data
-import ssg.define as define
+from reasoning_ros_interface.methods.ssg_3d.codeLib.common import normalize_imagenet
+from reasoning_ros_interface.methods.ssg_3d.ssg.utils.util_data import raw_to_data
+import reasoning_ros_interface.methods.ssg_3d.ssg.define as define
 import h5py,pathlib
 import numpy as np
 logger_py = logging.getLogger(__name__)
