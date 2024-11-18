@@ -189,7 +189,8 @@ class PCDDataset(data.Dataset):
     def __len__(self):
         return self.size
     
-    def norm_tensor(self, points):
+    @staticmethod
+    def norm_tensor(points):
         assert points.ndim == 2
         assert points.shape[1] == 3
         centroid = torch.mean(points, dim=0)  # N, 3
